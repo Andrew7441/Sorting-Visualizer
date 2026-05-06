@@ -29,7 +29,7 @@ public:
 		std::mt19937 generator {};
 		std::uniform_real_distribution<double> range {0.0, 1.0};
 
-		for(i = 0; i < MAX_SIZE; i++){
+		for(size_t i = 0; i < MAX_SIZE; i++){
 			vec.push_back(range(generator)); // generate random #
 		}
 	}
@@ -53,7 +53,7 @@ public:
 	void draw_array() {
 		size_t x_step{ WIDTH / MAX_SIZE };
 
-		for(i = 0; i < MAX_SIZE; i++){
+		for(size_t i = 0; i < MAX_SIZE; i++){
 			int height_rect = static_cast<int>(vec[i] * HEIGHT * 0.9);
 			auto color { sorted ?  GREEN : WHITE};
 			DrawRectangle(x_step * i, HEIGHT - height_rect, x_step, height_rect, color); 
