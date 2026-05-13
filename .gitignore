@@ -409,4 +409,4 @@ Makefile
 SortingVisualizer.make
 raylib.make
 .vscode/
-build/
+bin/
